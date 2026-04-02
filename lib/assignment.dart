@@ -105,22 +105,113 @@ import 'dart:io';
 
 // }
 
-void main(){
-  print("Enter integer");
+// void main(){
+//   print("Enter integer");
 
-  var number = int.parse(stdin.readLineSync()!);
+//   var number = int.parse(stdin.readLineSync()!);
   
-  if(number > 0 ){
-    print("The number is positive.");
-    if(number % 2 == 0){
-      print("It is even.");
+//   if(number > 0 ){
+//     print("The number is positive.");
+//     if(number % 2 == 0){
+//       print("It is even.");
 
+//     }else{
+//       print("It is odd.");
+//     }
+//   }else if(number < 0){
+//     print("The number is negative.");
+//   }else{
+//     print("The number is zero.");
+//   }
+// }
+
+//Question no 7.
+// void main(){
+//   print("Enter number of terms:");
+//   var n = int.parse(stdin.readLineSync()!);
+
+//   int a = 0 ,b = 1;
+
+//   for(int i = 1; i<= n; i++){
+//     print(a);
+//     int next = a + b;
+//     a = b;
+//     b = next;
+//   }
+  
+
+// }
+
+
+// question no 9
+// void main(){
+//   print("Enter a number:");
+//   String number = stdin.readLineSync()!;
+//   String rev = number.split('').reversed.join('');
+//   if (number == rev){
+//     print("The number is Palindrome");
+//   } else {
+//     print("The number is not Palindrome.");
+//   }
+// }
+
+//Question no 11.
+
+
+// void main() {
+//   print("Enter how many numbers:");
+//   int n = int.parse(stdin.readLineSync()!);
+
+//   List<int> numbers = [];
+
+//   // Taking input
+//   for (int i = 0; i < n; i++) {
+//     print("Enter number ${i + 1}:");
+//     int num = int.parse(stdin.readLineSync()!);
+//     numbers.add(num);
+//   }
+
+//   // Initialize
+//   int max = numbers[0];
+//   int min = numbers[0];
+//   int sum = 0;
+
+//   // Find max, min, sum
+//   for (int num in numbers) {
+//     if (num > max) {
+//       max = num;
+//     }
+//     if (num < min) {
+//       min = num;
+//     }
+//     sum = sum + num;
+//   }
+
+//   double average = sum / n;
+
+//   print("Largest: $max");
+//   print("Smallest: $min");
+//   print("Average: $average");
+// }
+
+//question no 12
+void main(){
+  print("Enter a year:");
+  int year = int.parse(stdin.readLineSync()!);
+  if (year % 4 == 0){
+    if (year % 100 == 0){
+      if (year % 400 ==0){
+        print("Leap Year");
+      }else{
+        print("Not a leap year");
+      }
     }else{
-      print("It is odd.");
+      print("Leap Year");
     }
-  }else if(number < 0){
-    print("The number is negative.");
+
   }else{
-    print("The number is zero.");
+    print("Not a leap year");
   }
+
 }
+
