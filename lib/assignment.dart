@@ -3,6 +3,10 @@
 // Hint: Use stdin to read two numeric inputs. Compare the length and breadth
 // using an if statement — if both values are equal, it’s a square.
 
+//stdin.readLineSync() is used to take input from the user in Dart. Reads what the user types from the keyboard.
+//String? means:
+//a variable that can store text or nothing
+//int.parse(...)-Converts a string into an integer (number).
 import 'dart:io';
 
 // void main() {
@@ -195,23 +199,32 @@ import 'dart:io';
 // }
 
 //question no 12
-void main(){
-  print("Enter a year:");
-  int year = int.parse(stdin.readLineSync()!);
-  if (year % 4 == 0){
-    if (year % 100 == 0){
-      if (year % 400 ==0){
-        print("Leap Year");
-      }else{
-        print("Not a leap year");
-      }
-    }else{
-      print("Leap Year");
-    }
+// void main(){
+//   print("Enter a year:");
+//   int year = int.parse(stdin.readLineSync()!);
+//   if (year % 4 == 0){
+//     if (year % 100 == 0){
+//       if (year % 400 ==0){
+//         print("Leap Year");
+//       }else{
+//         print("Not a leap year");
+//       }
+//     }else{
+//       print("Leap Year");
+//     }
 
-  }else{
-    print("Not a leap year");
+//   }else{
+//     print("Not a leap year");
+//   }
+
+// }
+
+//question  no 14:
+void main() {
+  print("Enter a number:");
+  int n = int.parse(stdin.readLineSync()!);
+
+  for (int i = 1; i <= 10; i++) {
+    print("$n x $i = ${n * i}");
   }
-
 }
-
